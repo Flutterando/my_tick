@@ -10,7 +10,7 @@ late final Realm realm;
 
 void initDatabase() {
   Configuration.defaultRealmName = "my_tick.realm";
-  final config = Configuration.local([Task.schema], path: 'db/${Configuration.defaultRealmName}');
+  final config = Configuration.local([Task.schema], path: '.db/${Configuration.defaultRealmName}');
   realm = Realm(config);
 }
 

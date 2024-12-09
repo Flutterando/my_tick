@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": "app"
+		}, 
+		{
+			"path": "server"
+		}
+	],
+	"settings": {},
+	"launch": {
+		"version": "0.2.0",
+		"configurations": [
+			{
+				"name": "app",
+				"cwd": "${workspaceFolder:app}",
+				"request": "launch",
+				"type": "dart"
+			},
+			{
+				"name": "server",
+				"cwd": "${workspaceFolder:server}",
+				"request": "launch",
+				"type": "dart"
+			}
+		],
+		"compounds": []
+	}
+}

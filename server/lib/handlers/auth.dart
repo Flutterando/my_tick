@@ -43,7 +43,7 @@ Middleware jwtMiddleware() {
         final jwt = JWT.verify(token, SecretKey(jwtSecret));
         final updatedRequest = request.change(context: {'username': jwt.payload['username']});
         return innerHandler(updatedRequest);
-      } on JWTException catch (e) {
+      } on JWTException {
         return Response.forbidden(jsonEncode({'message': 'Invalid or expired token'}), headers: {'Content-Type': 'application/json'});
       }
     };
